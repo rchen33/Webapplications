@@ -20,3 +20,12 @@ Important files:
 	- get_user_images(): Retrieves all the user_images from the database
 	- get_users(): Retrieves all the logged in users from the database.
 	- set_price(): Sets the price of a certain user_image.
+
+3) default_index.js: Found in applications/start/static/js/default_index.js
+	- Holds all the important data and methods in self.vue
+	- Functions like self.upload_complete(get_url, price) not only adds a new user_image to the list self.vue.user_images, but also to the database. It adds to the database by passing variables into the function add_image in api.py.
+	- Functions like self.get_users() calls the function get_users() in api.py to get a list of all the users from the database.
+
+4) index.html: Found in applications/start/views/default/index.html
+	- HTML file that designs the outline of the website.
+	- calls all the vue functions and variables. 
